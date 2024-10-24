@@ -36,10 +36,14 @@ public class LoginTest {
     public void test3(){
         ChromeDriver chromeDriver = new ChromeDriver();
         chromeDriver.get("https://secure.login.gov/");
+        String inputEmailXpath = "//*[@id=\"user_email\"]";
+        By inputEmailBy = By.xpath(inputEmailXpath);
+        WebElement EmailWebElement = chromeDriver.findElement(inputEmailBy);
+        EmailWebElement.sendKeys("testB@test.com");
         String inputPasswordXpath = "/html/body/main/div/form/lg-password-toggle/lg-validated-field/div/input";
         By inputPasswordBy = By.xpath(inputPasswordXpath);
         WebElement PasswordWebElement = chromeDriver.findElement(inputPasswordBy);
-        PasswordWebElement.sendKeys("1q2w#E4r");
+        PasswordWebElement.sendKeys("a1S@d3F$");
         String inputSignInXpath = "//*[@id=\"new_user\"]/lg-submit-button/button";
         By inputSignInBy = By.xpath(inputSignInXpath);
         chromeDriver.findElement(inputSignInBy);
