@@ -21,10 +21,12 @@ public class LoginTest {
     public void test2() {
         ChromeDriver chromeDriver = new ChromeDriver();
         chromeDriver.get("https://secure.login.gov/");
+
         String inputEmailXpath = "//*[@id=\"user_email\"]";
         By inputEmailBy = By.xpath(inputEmailXpath);
         WebElement inputEmailwebElement = chromeDriver.findElement(inputEmailBy);
         inputEmailwebElement.sendKeys("testA@test.com");
+
         String inputSignInXpath = "//*[@id=\"new_user\"]/lg-submit-button/button";
         By inputSignInBy = By.xpath(inputSignInXpath);
         chromeDriver.findElement(inputSignInBy);
@@ -36,6 +38,7 @@ public class LoginTest {
     public void test3(){
         ChromeDriver chromeDriver = new ChromeDriver();
         chromeDriver.get("https://secure.login.gov/");
+
         String inputEmailXpath = "//*[@id=\"user_email\"]";
         By inputEmailBy = By.xpath(inputEmailXpath);
         WebElement EmailWebElement = chromeDriver.findElement(inputEmailBy);
